@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" x-data="caseSearch()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Explore a collection of unsolved cold cases. Click or search to view details about each case."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endless Voice | Howard County, MD</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Load htmx from the CDN -->
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+    <!-- Load Alpine.js from the CDN -->
+    <script
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Endless Voice - Howard County, MD</h1>
+
+    <!-- Search box for filtering cases -->
+      <input type="text" placeholder="Search victims..." x-model="search" @input="filterCases()"/>
+
+    <!-- Static list of cases (SEO friendly) -->
+
+      <ul id="case-list">
+        <li data-title="Tamba Karmor Nyorkor">
+        <!-- The href points to a static HTML file for SEO; htmx enhances the experience -->
+          <a href="victims/tambanyorkor.html" hx-get="victims/tambanyorkor.html" hx-target="#case-content">
+          Tamba Karmor Nyorkor
+          </a>
+        </li>
+        <li data-title="Rabiah Ahmad">
+          <a href="victims/rabiahahmad.html" hx-get="victims/rabiahahmad.html" hx-target="#case-content">
+          Rabiah Ahmad
+          </a>
+        </li>
+        <li data-title="Meiko Locksley">
+          <a href="victims/meikolocksley.html" hx-get="victims/meikolocksley.html" hx-target="#case-content">
+          Meiko Locksley
+          </a>
+        </li>
+      </ul>
+<!-- Container where the case details will be loaded by htmx -->
+      <div id="case-content">
+        <p>Please select a case to view its details.</p>
+      </div>
+    </main> 
+  </body>
+</html>

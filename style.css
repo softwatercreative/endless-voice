@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+input {
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1em;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 0.5em 0;
+}
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+a:hover {
+  text-decoration: underline;
+}
+#case-content {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-top: 1em;
+}
+.hidden {
+  display: none;
+}
