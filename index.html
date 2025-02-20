@@ -19,58 +19,92 @@
     <script src="scripts.js"></script>
   </head>
   <body>
-      <header>
-    <div class="logo">
-      <h1>EndlessVoice</h1>
-    </div>
-    <!-- <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav> -->
-  </header>
+    <header>
+      <div class="logo"><h1>EndlessVoice</h1></div>
+      <nav>
+        <ul>
+          <li><a hx-get="about.html" hx-target="#case-content">About</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <h1>Endless Voice - Howard County, MD</h1>
+      <section>
+        <h1>Amplify the voices of the victims</h1>
+        <p>Endless Voice - Howard County, MD</p>
 
-    <!-- Search box for filtering cases -->
-      <input type="text" placeholder="Search victims..." x-model="search" @input="filterCases()"/>
+        <!-- Search box for filtering cases -->
+        <input
+          type="text"
+          placeholder="Search victims..."
+          x-model="search"
+          @input="filterCases()"
+        />
 
-    <!-- Static list of cases (SEO friendly) -->
+        <!-- Static list of cases (SEO friendly) -->
 
-      <ul id="case-list">
-        <li data-title="Tamba Karmor Nyorkor">
-        <!-- The href points to a static HTML file for SEO; htmx enhances the experience -->
-          <a href="victims/tamba-nyorkor.html" hx-get="victims/tamba-nyorkor.html" hx-target="#case-content">
-          Tamba Karmor Nyorkor
-          </a>
-        </li>
-        <li data-title="Rabiah Ahmad">
-          <a href="victims/rabiah-ahmad.html" hx-get="victims/rabiah-ahmad.html" hx-target="#case-content">
-          Rabiah Ahmad
-          </a>
-        </li>
-        <li data-title="Meiko Locksley">
-          <a href="victims/meiko-locksley.html" hx-get="victims/meiko-locksley.html" hx-target="#case-content">
-          Meiko Locksley
-          </a>
-        </li>
-        <li data-title="Leon Swain">
-          <a href="victims/leon-swain.html" hx-get="victims/leon-swain.html" hx-target="#case-content">
-          Leon Swain
-          </a>
-        </li>
-        <li data-title="Aaron Thomas Brice">
-          <a href="victims/aaron-thomas-brice.html" hx-get="victims/aaron-thomas-brice.html" hx-target="#case-content">
-            Aaron Thomas Brice
-          </a>
-        </li>
-      </ul>
-<!-- Container where the case details will be loaded by htmx -->
+        <ul id="case-list">
+          <li data-title="Tamba Karmor Nyorkor">
+            <!-- The href points to a static HTML file for SEO; htmx enhances the experience -->
+            <a
+              href="victims/tamba-nyorkor.html"
+              hx-get="victims/tamba-nyorkor.html"
+              hx-target="#case-content"
+            >
+              Tamba Karmor Nyorkor
+            </a>
+          </li>
+          <li data-title="Rabiah Ahmad">
+            <a
+              href="victims/rabiah-ahmad.html"
+              hx-get="victims/rabiah-ahmad.html"
+              hx-target="#case-content"
+            >
+              Rabiah Ahmad
+            </a>
+          </li>
+          <li data-title="Meiko Locksley">
+            <a
+              href="victims/meiko-locksley.html"
+              hx-get="victims/meiko-locksley.html"
+              hx-target="#case-content"
+            >
+              Meiko Locksley
+            </a>
+          </li>
+          <li data-title="Leon Swain">
+            <a
+              href="victims/leon-swain.html"
+              hx-get="victims/leon-swain.html"
+              hx-target="#case-content"
+            >
+              Leon Swain
+            </a>
+          </li>
+          <li data-title="Aaron Thomas Brice">
+            <a
+              href="victims/aaron-thomas-brice.html"
+              hx-get="victims/aaron-thomas-brice.html"
+              hx-target="#case-content"
+            >
+              Aaron Thomas Brice
+            </a>
+          </li>
+          <li data-title="Aaron Thomas Brice">
+            <a
+              href="victims/rolando-andrade.html"
+              hx-get="victims/rolando-andrade.html"
+              hx-target="#case-content"
+            >
+              Rolando Andrade
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Container where the case details will be loaded by htmx -->
       <div id="case-content">
         <p>Please select a case to view its details.</p>
       </div>
-    </main> 
+    </main>
   </body>
 </html>
