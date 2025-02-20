@@ -30,3 +30,57 @@ a:hover {
 .hidden {
   display: none;
 }
+/* Sticky header using position: sticky */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+header:hover {
+  background: #f9f9f9;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li + li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav li + li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
