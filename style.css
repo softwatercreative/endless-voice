@@ -33,7 +33,7 @@ a:hover {
 
 h1,
 h2 {
-  margin: 1rem;
+  margin: 1rem 0;
 }
 /* Sticky header using position: sticky */
 header {
