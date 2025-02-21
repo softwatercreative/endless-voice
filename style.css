@@ -30,6 +30,11 @@ a:hover {
 .hidden {
   display: none;
 }
+
+h1,
+h2 {
+  margin: 1rem;
+}
 /* Sticky header using position: sticky */
 header {
   position: sticky;
