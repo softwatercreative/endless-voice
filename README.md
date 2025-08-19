@@ -1,1 +1,1 @@
-A digital archive for documenting cold cases and their stories.
+A digital archive amplifying forgotten voices through cold case stories. Built with Alpine.js for reactive interactivity and htmx for dynamic HTML updates, this web app features a user-friendly interface for sharing and exploring narratives.
